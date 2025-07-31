@@ -1,18 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dancuenc <dancuenc@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/31 18:51:32 by dancuenc          #+#    #+#             */
-/*   Updated: 2025/07/31 18:52:16 by dancuenc         ###   ########.fr       */
+/*   Created: 2025/02/03 12:23:26 by dancuenc          #+#    #+#             */
+/*   Updated: 2025/02/04 13:21:06 by dancuenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	main(int ac, char **av)
+#include "libft.h"
+
+/* void custom_delete(void *content)
 {
-	(void)ac;
-	(void)av;
-	return (0);
+	free(content);
+} */
+//Takes as a parameter an element and frees the memory of the element's content
+//Usses the function 'del' given as a parameter and free the element
+//The memory of 'next' must not be freed.
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
+{
+	if (!lst)
+		return ;
+	if (del && lst->content)
+		del(lst->content);
+	free(lst);
 }

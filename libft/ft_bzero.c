@@ -1,18 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dancuenc <dancuenc@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/31 18:51:32 by dancuenc          #+#    #+#             */
-/*   Updated: 2025/07/31 18:52:16 by dancuenc         ###   ########.fr       */
+/*   Created: 2025/01/15 12:14:17 by dancuenc          #+#    #+#             */
+/*   Updated: 2025/02/04 12:34:26 by dancuenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	main(int ac, char **av)
+#include "libft.h"
+
+//Fill memory with 0 in size positions
+void	ft_bzero(void *pointer, int size)
 {
-	(void)ac;
-	(void)av;
-	return (0);
+	char	*ptr;
+	int		i;
+
+	ptr = pointer;
+	i = 0;
+	while (i < size)
+	{
+		ptr[i] = 0;
+		i++;
+	}
 }
