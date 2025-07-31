@@ -1,18 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dancuenc <dancuenc@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/31 18:51:32 by dancuenc          #+#    #+#             */
-/*   Updated: 2025/07/31 18:52:16 by dancuenc         ###   ########.fr       */
+/*   Created: 2025/01/15 12:23:18 by dancuenc          #+#    #+#             */
+/*   Updated: 2025/03/28 15:07:33 by dancuenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	main(int ac, char **av)
+#include "libft.h"
+
+//Sets size positions in pointer to the character of value
+void	*ft_memset(void *pointer, int value, int size)
 {
-	(void)ac;
-	(void)av;
-	return (0);
+	char	*ptr;
+	int		i;
+
+	ptr = pointer;
+	i = 0;
+	while (i < size)
+	{
+		ptr[i] = (char)value;
+		i++;
+	}
+	return (pointer);
 }

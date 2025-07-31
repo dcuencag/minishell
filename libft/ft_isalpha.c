@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dancuenc <dancuenc@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/31 18:51:32 by dancuenc          #+#    #+#             */
-/*   Updated: 2025/07/31 18:52:16 by dancuenc         ###   ########.fr       */
+/*   Created: 2025/01/15 12:16:32 by dancuenc          #+#    #+#             */
+/*   Updated: 2025/02/04 12:27:36 by dancuenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	main(int ac, char **av)
+#include "libft.h"
+
+//Detect if C is alphabetic
+int	ft_isalpha(int c)
 {
-	(void)ac;
-	(void)av;
-	return (0);
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+		return (1);
+	else
+		return (0);
 }

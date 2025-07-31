@@ -1,18 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dancuenc <dancuenc@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/31 18:51:32 by dancuenc          #+#    #+#             */
-/*   Updated: 2025/07/31 18:52:16 by dancuenc         ###   ########.fr       */
+/*   Created: 2025/02/03 12:43:18 by dancuenc          #+#    #+#             */
+/*   Updated: 2025/02/04 13:33:52 by dancuenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	main(int ac, char **av)
+#include "libft.h"
+
+// Function to be applied to each element of the list
+/* void print_element(void *content)
 {
-	(void)ac;
-	(void)av;
-	return (0);
+	printf("%s\n", (char *)content);
+} */
+void	ft_lstiter(t_list *lst, void (*f)(void *))
+{
+	t_list	*aux;
+
+	if (!lst || !f)
+		return ;
+	aux = lst;
+	while (aux)
+	{
+		f(aux->content);
+		aux = aux->next;
+	}
 }

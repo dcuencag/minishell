@@ -1,18 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dancuenc <dancuenc@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/31 18:51:32 by dancuenc          #+#    #+#             */
-/*   Updated: 2025/07/31 18:52:16 by dancuenc         ###   ########.fr       */
+/*   Created: 2025/01/20 16:45:02 by dancuenc          #+#    #+#             */
+/*   Updated: 2025/02/04 12:52:17 by dancuenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	main(int ac, char **av)
+#include "libft.h"
+
+//Writes the string found in *S int the fd(file descriptor)
+//Ends in a new line
+void	ft_putendl_fd(char *s, int fd)
 {
-	(void)ac;
-	(void)av;
-	return (0);
+	size_t	i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		ft_putchar_fd(s[i], fd);
+		i++;
+	}
+	ft_putchar_fd('\n', fd);
 }

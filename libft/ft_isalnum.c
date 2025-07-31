@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dancuenc <dancuenc@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/31 18:51:32 by dancuenc          #+#    #+#             */
-/*   Updated: 2025/07/31 18:52:16 by dancuenc         ###   ########.fr       */
+/*   Created: 2025/01/15 12:16:16 by dancuenc          #+#    #+#             */
+/*   Updated: 2025/02/04 12:31:30 by dancuenc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	main(int ac, char **av)
+#include "libft.h"
+
+//Detects if C it's Alphanumeric
+int	ft_isalnum(int c)
 {
-	(void)ac;
-	(void)av;
-	return (0);
+	if (((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+		|| (c >= '0' && c <= '9'))
+		return (1);
+	else
+		return (0);
 }
